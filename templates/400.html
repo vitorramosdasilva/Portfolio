@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Erro 400</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            </br>
+            </br>
+            </br>
+          <div class="jumbotron">
+              <h1 class="display-4"><strong>Oooops!! Erro 400</strong></h1>
+              <p class="lead">Desculpe, não encontramos essa página.</p>
+              <hr class="my-4">
+              <p>Volte a pagina inícial</p>
+              <p class="lead">
+                <a class="btn btn-primary btn-lg" href="{% url 'index' %}" role="button">Voltar</a>
+              </p>
+            </div>
+        </div>
+    </body>
+</html>
