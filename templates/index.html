@@ -1,0 +1,77 @@
+{% extends  'base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %} Portifolio {% endblock %}
+
+{% block content %}
+
+<section class="mt-5 page-section portfolio bg-white" id="portfolio">
+     <div class="container">
+         <!-- Portfolio Section Heading-->
+         <h2 class="page-section-heading text-center text-uppercase text-chumbo mb-0">Portfolio</h2>
+         <!-- Icon Divider-->
+         <div class="divider-custom">
+            <!-- <div class="divider-custom-line"></div>
+             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+             <div class="divider-custom-line"></div>-->
+         </div>
+         <!-- Portfolio Grid Items-->
+         <div class="row justify-content-center">
+             <!-- Portfolio Item 6-->
+             <div class="col-md-6 col-lg-4">
+                 <div class="portfolio-item mx-auto">
+                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                         <div class="portfolio-item-caption-content text-center text-white"></div>
+                     </div>
+                     <img class="img-redonda" src="{% static 'img/dashboard.jpeg' %}" alt="dashboard" width="264" height="191">
+                 </div>
+
+                 <div class="d-flex justify-content-between align-items-center mt-2">
+                     <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-success"><i class='fab fa-html5 fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class='fab fa-css3 fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class='fab fa-python fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class="fab fa-js-square fa-spin fa-3x"></i></button>
+                     </div>
+                 </div>
+
+                 <div class="d-flex justify-content-between align-items-center mt-2">
+                     <div class="btn-group">
+                         <a href="https://dashboard-genghiscode.herokuapp.com/"><button type="button" class="btn btn-sm btn-outline-success">Projeto</button></a>
+                         <a href="https://github.com/vitorramosdasilva/dashboard-genghiscode"><button type="button" class="btn btn-sm btn-outline-primary">Código</button></a>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="col-md-6 col-lg-4">
+                 <div class="portfolio-item mx-auto">
+                     <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                         <div class="portfolio-item-caption-content text-center text-white"></div>
+                     </div>
+                     <img class="img-redonda" src="{% static 'img/genghiscode.jpeg' %}" alt="dashboard" width="264" height="191">
+                 </div>
+
+                 <div class="d-flex justify-content-between align-items-center mt-2">
+                     <div class="btn-group">
+                         <button type="button" class="btn btn-sm btn-outline-success"><i class='fab fa-html5 fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class='fab fa-css3 fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class='fab fa-python fa-spin fa-3x'></i></button>
+                         <button type="button" class="btn btn-sm btn-outline-primary"><i class="fab fa-js-square fa-spin fa-3x"></i></button>
+                     </div>
+                 </div>
+
+                 <div class="d-flex justify-content-between align-items-center mt-2">
+                     <div class="btn-group">
+                         <a href="https://genghiscode.com.br"><button type="button" class="btn btn-sm btn-outline-success">Projeto</button></a>
+                         <a href="https://github.com/vitorramosdasilva/geghis"><button type="button" class="btn btn-sm btn-outline-primary">Código</button></a>
+                     </div>
+                 </div>
+             </div>
+
+
+         </div>
+     </div>
+ </section>
+
+{% endblock %}

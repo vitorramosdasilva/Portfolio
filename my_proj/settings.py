@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # 'django.contrib.sites',
     'crispy_forms',
     'portfolio',
-    # 'widget_tweaks',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'my_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portifolio',
+        'NAME': 'portfolio',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
@@ -134,11 +134,12 @@ MEDIA_UL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'dashboard:index'
-LOGOUT_REDIRECT_URL = 'dashboard:index'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# LOGIN_REDIRECT_URL = 'dashboard:index'
+# LOGOUT_REDIRECT_URL = 'dashboard:index'
+
+# Zoho Email Settings ...
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
@@ -146,11 +147,12 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'accounts.authentication.EmailAuthBackend',
-]
+# AUTHENTICATION_BACKENDS = [
+#     'django.contrib.auth.backends.ModelBackend',
+#     'accounts.authentication.EmailAuthBackend',
+# ]
 
 try:
     from .local_settings import *
