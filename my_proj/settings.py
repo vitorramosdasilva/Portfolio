@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'ABCX')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'portfolio',
     'widget_tweaks',
+    # 'nocaptcha_recaptcha',
+    'captcha',
+
 ]
 
 MIDDLEWARE = [
@@ -148,12 +151,17 @@ EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
+GOOGLE_VERIFY_RECAPTCHA_URL = '6LfgXGUaAAAAALU2LxIhjAtsZd8bpOo0-N9kBcHj'
+RECAPTCHA_SECRET_KEY = '6LfgXGUaAAAAACp_Yin9GRzQtkZ8XrM5ZdUMUpKf'
+
+RECAPTCHA_PUBLIC_KEY = '6LfgXGUaAAAAALU2LxIhjAtsZd8bpOo0-N9kBcHj'
+RECAPTCHA_PRIVATE_KEY = '6LfgXGUaAAAAACp_Yin9GRzQtkZ8XrM5ZdUMUpKf'
+NOCAPTCHA = True
 
 # AUTHENTICATION_BACKENDS = [
 #     'django.contrib.auth.backends.ModelBackend',
 #     'accounts.authentication.EmailAuthBackend',
 # ]
-
 try:
     from .local_settings import *
 except ImportError:
