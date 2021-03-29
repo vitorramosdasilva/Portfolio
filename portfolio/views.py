@@ -4,6 +4,7 @@ from django.core.mail import send_mail, BadHeaderError
 from portfolio.forms import ContatoForm
 from django.shortcuts import render
 from django.conf import settings
+from smtplib import SMTPException
 
 
 def indexView(request):
@@ -30,7 +31,9 @@ def indexView(request):
                 form = ContatoForm
             except BadHeaderError:
                 messages.error(request, 'Erro ao enviar e-mail.\nTente Novamente e revise o conteúdo.')
-            return render(request, "index.html", {'form': form})
+            except SMTPException as e:  # It will catch other errors related to SMTP.
+                print('There was an error sending an email.' + e)
+                return render(request, "index.html", {'form': form})
     return render(request, "index.html", {'form': form})
 
 
