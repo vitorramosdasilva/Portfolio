@@ -33,3 +33,4 @@ class ContatoForm(forms.Form):
         max_length=400
     )
     captcha = ReCaptchaField()
+

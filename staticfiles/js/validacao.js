@@ -20,7 +20,6 @@
 					minlength: 5,
 					maxlength: 100
 				}
-
        },
       messages:{
             name:{
@@ -42,6 +41,5 @@
                     minlength:"O assunto deve ter pelo menos 5 caracteres",
                     maxlength:"O assunto deve ter no máximo 400 caracteres"
              }
-
        }
 });
