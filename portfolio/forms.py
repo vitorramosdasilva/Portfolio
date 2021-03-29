@@ -1,7 +1,5 @@
 from django import forms
 from django.core.mail.message import EmailMessage
-# from nocaptcha_recaptcha.fields import NoReCaptchaField
-from django.conf import settings
 from captcha.fields import ReCaptchaField
 
 class ContatoForm(forms.Form):

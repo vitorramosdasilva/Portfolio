@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'ABCX')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-INTERNAL_IPS = ['127.0.0.1']
+# INTERNAL_IPS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 'django.contrib.sites',
+
     'crispy_forms',
     'portfolio',
     'widget_tweaks',
-    # 'nocaptcha_recaptcha',
+
     'captcha',
 
 ]
@@ -150,6 +151,8 @@ DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+NOCAPTCHA = True
+
 
 try:
     from .local_settings import *
