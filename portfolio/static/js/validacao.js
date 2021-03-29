@@ -41,6 +41,5 @@
                     minlength:"O assunto deve ter pelo menos 5 caracteres",
                     maxlength:"O assunto deve ter no máximo 400 caracteres"
              }
-
        }
 });

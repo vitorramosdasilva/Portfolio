@@ -1,7 +1,7 @@
 from django.urls import path
-from portfolio.views import IndexView
+from portfolio.views import indexView
 
 
 urlpatterns = [
-    path('', IndexView, name='index'),
+    path('', indexView, name='index'),
 ]

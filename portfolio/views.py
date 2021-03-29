@@ -1,12 +1,12 @@
 # coding=utf-8
 from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
-from .forms import ContatoForm
+from portfolio.forms import ContatoForm
 from django.shortcuts import render
 from django.conf import settings
 
 
-def IndexView(request):
+def indexView(request):
     if request.method == 'GET':
         form = ContatoForm()
         return render(request, "index.html", {'form': form})
@@ -18,7 +18,7 @@ def IndexView(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             message = 'Assunto: ' + subject + '\n' + 'Name: ' + name + '\n' + 'Email: ' + email + '\n' + 'Messagem: ' + message
-            messages.success(request, 'E-mail enviado com sucesso.\nRetornaremos em até 48 horas úteis.' )
+            messages.success(request, 'E-mail enviado com sucesso.\nRetornaremos em até 48 horas úteis.')
             try:
                 send_mail(subject,
                           message,
@@ -26,6 +26,7 @@ def IndexView(request):
                           [settings.EMAIL_HOST_USER],
                           fail_silently=False
                           )
+
                 form = ContatoForm
             except BadHeaderError:
                 messages.error(request, 'Erro ao enviar e-mail.\nTente Novamente e revise o conteúdo.')
@@ -33,7 +34,6 @@ def IndexView(request):
     return render(request, "index.html", {'form': form})
 
 
-# Page Error ...
 def error_400(request, exception):
     return render(request, '400.html', status=400)
 
@@ -48,4 +48,3 @@ def error_404(request, exception):
 
 def error_50x(request, exception):
     return render(request, '500.html', status=500)
-
