@@ -24,7 +24,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'ABCX')
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
 INTERNAL_IPS = ['127.0.0.1']
 # Application definition
 
@@ -139,8 +138,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# LOGIN_REDIRECT_URL = 'dashboard:index'
-# LOGOUT_REDIRECT_URL = 'dashboard:index'
 
 # Zoho Email Settings ...
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
@@ -150,8 +147,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-RECAPTCHA_PUBLIC_KEY = os.environ.get('DEFAULT_FROM_EMAIL')
-RECAPTCHA_PRIVATE_KEY = os.environ.get('DEFAULT_FROM_EMAIL')
+
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 
 try:
     from .local_settings import *
