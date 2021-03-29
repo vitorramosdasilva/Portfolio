@@ -19,10 +19,8 @@
 					required: true,
 					minlength: 5,
 					maxlength: 100
-				},
-			captcha: {
-			        required: true
-			}
+				}
+
        },
       messages:{
             name:{
@@ -43,9 +41,7 @@
                     required:"O assunto não pode ficar em branco",
                     minlength:"O assunto deve ter pelo menos 5 caracteres",
                     maxlength:"O assunto deve ter no máximo 400 caracteres"
-             },
-             captcha: {
-                    required:"A Captcha não poder estar vazia"
-            }
+             }
+
        }
 });
