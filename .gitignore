@@ -10,5 +10,6 @@ db.sqlite3
 /static
 .DS_Store
 commands/
+venv/
 commands.txt
 demandas.txt

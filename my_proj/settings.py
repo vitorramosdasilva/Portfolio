@@ -150,16 +150,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+RECAPTCHA_PUBLIC_KEY = os.environ.get('DEFAULT_FROM_EMAIL')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('DEFAULT_FROM_EMAIL')
 
-GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('GOOGLE_RECAPTCHA_SECRET_KEY')
-GOOGLE_VERIFY_RECAPTCHA_URL = os.environ.get('GOOGLE_VERIFY_RECAPTCHA_URL')
-
-# NOCAPTCHA = True
-
-# AUTHENTICATION_BACKENDS = [
-#     'django.contrib.auth.backends.ModelBackend',
-#     'accounts.authentication.EmailAuthBackend',
-# ]
 try:
     from .local_settings import *
 except ImportError:
