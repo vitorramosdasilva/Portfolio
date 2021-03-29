@@ -143,13 +143,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Zoho Email Settings ...
 # Zoho Email Settings ...
-EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL') # 1
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND') # 2
+EMAIL_HOST = os.environ.get('EMAIL_HOST') # 3
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER') # 4
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD') # 5
+EMAIL_PORT = os.environ.get('EMAIL_PORT') # 6
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS') # 7
+
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
