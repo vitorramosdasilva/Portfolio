@@ -156,6 +156,15 @@ RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 NOCAPTCHA = True
 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
 try:
     from .local_settings import *
 except ImportError:

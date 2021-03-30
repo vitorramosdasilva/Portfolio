@@ -47,7 +47,21 @@
                 </div>
             </div>
         </nav>
-
+        {% if messages %}
+            {% for message in messages %}
+            <div class="container mt-5">
+                <hr>
+                <hr>
+                <hr>
+              <div class="alert {{ message.tags }} alert-dismissible mt-5" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                {{ message }}
+              </div>
+            </div>
+            {% endfor %}
+        {% endif %}
 
 
 <section class="mt-5 page-section portfolio bg-white" id="portfolio">
@@ -187,16 +201,6 @@
                 <h2 class="page-section-heading text-center text-uppercase text-chumbo mb-0">Me Contate</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
-
-               	{% if messages %}
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                      {% for message in messages %}<strong></strong>{{ message }}{% endfor %}
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-
-                {% endif %}
                 </div>
                 <!-- Contact Section Form-->
                 <div class="row">
@@ -279,8 +283,7 @@
                     <!-- Footer Social Icons-->
                     <div class="col-lg-6 mb-5 mb-lg-0">
                         <h4 class="mb-4">Redes Sociais</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/GenghisCode"><i class="fab fa-fw fa-facebook-f"></i></a>
                     </div>
                     <!-- Footer About Text-->
                 </div>
